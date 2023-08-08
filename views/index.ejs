@@ -1,0 +1,30 @@
+<div class="div container">
+    <div class="div row">
+        <div class="col-md-8">
+            <h1> ini page Dashboard</h1>
+                <a href="/student/add" class="btn btn-primary">Add-Student</a>
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th scope="col">No</th>
+                            <th scope="col">Nisn</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <% student.forEach((std, i) => { %>
+                                <tr>
+                                    <th scope="row"><%= i %></th>
+                                    <td><%= std.nisn %></td>
+                                    <td><%= std.nama %></td>
+                                    <td>
+                                        <a href="/student/<%=std.nisn%>" class="btn btn-success">Detail</a>
+                                    </td>
+                                </tr>
+                            <% }) %>
+                        </tbody>
+                    </table>
+        </div>
+    </div>
+</div>
